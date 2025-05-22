@@ -1,0 +1,491 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+ .justifi-top-layer {
+     position: relative;
+     z-index: 999;
+ }
+a.btn-justifi,
+button.btn-justifi {
+     cursor: pointer;
+     -webkit-appearance: none;
+     background-color: #2591ea;
+     border: none;
+     border-radius: 10px;
+     padding: 10px 25px;
+     font-size: 16px;
+     color: #FFF !important;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     margin: 3px 0;
+}
+a.btn-justifi:hover,
+a.btn-justifi:active,
+button.btn-justifi:hover,
+button.btn-justifi:focus {
+     opacity: 0.9;
+}
+
+/* Justifi Dashboard - Account Setup */
+#dashboard_heading,
+#dashboard_notice {
+     display: inline-block;
+}
+.justifi-pending {
+     text-align:center;
+     margin-bottom: 40px;
+}
+.justifi-pending i {
+     font-size: 46px;
+     color: #2591ea;
+}
+.justifi-pending h4 {
+     margin: 15px auto;
+}
+.justifi-pending p {
+     margin: 0 auto;
+}
+.form-notices,
+.account-notices {
+     text-align: right;
+     display: flex;
+     align-items: start;
+     margin: 8px 0 0 0;
+}
+
+
+/* Notices - Alerts */
+.z-top {
+     position: relative !important;
+     z-index: 99 !important;
+}
+#top .account-notices {
+     position: relative;
+     z-index: 99 !important;
+}
+#top .account-notices .alerts {
+     position: relative;
+     cursor: pointer;
+}
+#top .account-notices .alerts .notice-counter {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 16px;
+     height: 16px;
+     border-radius: 50%;
+     background-color: #CCC;
+     color: #FFF;
+     font-size: 10px;
+     font-weight: 600;
+     
+     position: absolute;
+     top: -5px;
+     right: -6px;
+}
+#top .account-notices .alerts .notice-counter.active {
+     background-color: #F00;
+}
+#top .account-notices .alerts i.fa-bell {
+     color: #ddd;
+     font-size: 30px;
+}
+#top .account-notices .alerts.active i.fa-bell {
+     color: #2591ea;
+}
+#top .account-notices .notices {
+     display: none;
+     position: absolute;
+     top: 0;
+     left: 50px;
+     width: 350px;
+     padding: 0;	
+}
+#top .account-notices .notices .loader {
+     display: none;
+     position: absolute;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+
+     justify-content: center;
+     align-items: center;
+     background-color: rgba(255,255,255,.8);
+     z-index: 999;
+}
+#top .account-notices .notices .loader.active {
+     display: flex;
+}
+#top .account-notices .notices ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+#top .account-notices .notices ul li {
+     padding: 10px 30px 10px 10px;
+     margin: 0 0 6px;
+     background-color: #FFF;
+     font-size: 12px;
+     text-align: left;
+     border-radius: 0;
+     box-shadow: 2px 2px 4px rgba(0,0,0,.6);
+}
+#top .account-notices .notices ul li:last-child {
+     border-bottom: none;
+}
+#top .account-notices .notices ul li.notice {
+     color: #000;
+     border-left: 5px transparent;
+}
+#top .account-notices .notices ul li.notice.payment-dispute {
+     border-left: 5px solid #E88A27;
+}
+#top .account-notices .notices ul li.notice.account-update {
+     border-left: 5px solid #2591ea;
+}
+#top .account-notices .notices ul li.notice h5 {
+     font-size: 14px;
+     font-weight: 700;
+     display: block;
+     color: #000;
+     margin: 0;
+     padding-top: 0;    
+}
+#top .account-notices .notices ul li.notice h5 span {
+     font-weight: 400;
+     font-size: 12px;
+     
+}
+#top .account-notices .notices ul li.notice b {
+     font-weight: 700 !important;
+     color: #000;
+     display: inline-block;
+}
+#top .account-notices .notices ul li.notice .dismiss-notice {
+     position: absolute;
+     right: 10px;
+     top: 10px;
+     cursor: pointer;
+}
+#top .account-notices .notices ul li.notice .dismiss-notice i {
+     color: #2591ea;
+     font-size: 14px;
+}
+#top .account-notices .notices .close-list {
+     background-color: #2591ea;
+     color: #FFF;
+     padding: 5px 10px;
+     border-radius: 5px;
+     border: none;
+     margin-top: 2px;
+     cursor: pointer;
+}
+#top .account-notices .notices .close-list:hover {
+     opacity: .8;    
+}
+
+@media( max-width: 768px ) {
+     #top .account-notices .notices {
+         top: 39px;
+         left: -140px;
+     }
+}
+
+.form-notices .message {
+     display: inline-block;
+     display: none;
+}
+.form-notices .account-status {
+     border: 2px solid #999;
+     background-color: #eee;
+     color: #333;
+     padding: 3px 5px;
+     border-radius: 5px;
+     font-size: 13px;
+     font-weight: 700;
+     line-height: 1;
+}
+.form-notices .account-status.status-enabled {
+     background-color: #d1e7dd;
+     border-color: #a3cfbb;  
+     color: #198754;  
+}
+
+
+
+
+.justifi-dashboard {
+     padding: 0 !important;
+     margin: 0 auto;
+     border: 2px solid #ddd;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+}
+#top .justifi-dashboard h3 {
+     margin: 0;
+     padding: 19px 15px 16px 34px;
+     display: block;
+     border-bottom: 2px solid #ddd;
+     font-size: 20px;
+     line-height: 1em;
+}
+.justifi-dashboard .message {
+     color: #000;
+}
+.justifi-loader {
+     display: none;
+     position: absolute;
+     z-index: 99;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     background-color: rgba(0, 0, 0, .6);
+     opacity: .6;
+     text-align: center;
+     width: 100%;
+     justify-content: center;
+     align-items: center;
+     border-radius: 10px;
+}
+.justifi-loader.show {
+     display: flex;
+}
+.justifi-dashboard .justifi-account-intro {
+     margin-bottom: 12px;
+}
+#top .justifi-dashboard h4 {
+     font-size: 20px;
+     font-weight: 600;
+}
+.justifi-dashboard section.step {
+     display: flex;
+     border-bottom: 2px solid #ddd;
+     font-size: 16px;
+     padding: 15px;
+     align-items: center;
+}
+.justifi-dashboard section.step:last-child {
+     border-bottom: none;
+}
+.justifi-dashboard section.step p {
+     margin: 5px 0;
+}
+.justifi-dashboard section.step .step-icon {
+     min-width: 40px;
+     align-self: start;
+     padding-top: 8px;
+}
+.justifi-dashboard section.step i {
+     font-size: 20px;
+}
+.justifi-dashboard section.step i.fa-check,
+.dash-pending i.fa-check-circle {
+     color: #00c437;
+}
+.justifi-dashboard section.step i.fa-times {
+     color: #c40000;
+}
+.justifi-dashboard section.step i.fa-exclamation-triangle,
+.dash-pending i.fa-envelope {
+     color: #ffc939;
+}
+.justifi-dashboard section.step .step-content {
+     max-width: 750px;
+}
+.justifi-dashboard section.step .step-action {
+     text-align: right;
+     padding: 0 15px;
+     flex-grow: 1;
+}
+.justifi-dashboard section.step .step-action button {
+     font-size: 14px;
+}
+
+@media(max-width: 767px) {
+     .justifi-dashboard section.step {
+          flex-direction: column;
+     }
+}
+/* Business Form */
+.justifi-business-form.submitted {
+     display: none;
+}
+.justifi-biz-form-success {
+     color: #000;
+}
+.form-notices .message,
+.justifi-onboard .form-input.tc {
+     border-radius: 10px;
+     padding: 10px 20px 6px;
+     font-size: 16px;
+     background-color: #fafafa;
+     border: 2px solid #ddd;
+     margin: 40px 0;
+     color: #0a3622;
+}
+.form-notices .message {
+     margin: 10px 0;
+}
+.form-notices .message p {
+     margin: 0 0 5px 0 !important;
+}
+.form-notices .message.success {
+     background-color: #d1e7dd;
+     border-color: #a3cfcc;
+     color: #0a3622;
+}
+.form-notices .message.error {
+     background-color: #f8d7da;
+     border-color: #f1aeb5;
+     color: rgb(220, 53, 69);
+}
+
+/* Onboarding Form */
+.justifi-onboard .form-input {
+     margin-bottom: 12px;
+}
+.justifi-onboard input[type="submit"],
+justifi-business-form button[type="submit"] {
+     background-color: #2591ea;
+     width: auto !important;
+     display: inline-block;
+     padding: 13px 30px 10px 30px;
+     line-height: 1;
+     font-size: 18px;
+}
+.justifi-onboard input[type="submit"]:hover,
+.justifi-onboard input[type="submit"]:focus,
+justifi-business-form button[type="submit"]:hover,
+justifi-business-form button[type="submit"]:focus {
+     background-color: #2591ea;
+     opacity: 0.8;
+}
+
+/* PAYMENT GATEWAY */
+.payment_method_justifi_payment_gateway > label {
+     height: 28px;
+}
+.payment_method_justifi_payment_gateway > label > span {
+     font-style: italic;    
+     color: #FCCC32;
+     padding-left: 5px;
+}
+.payment_method_justifi_payment_gateway > label > span:after {
+     content: '';
+     background-image: url('../media/justifi-icon_72x72.png');
+     background-size: cover;
+     width: 22px;
+     height: 22px;
+     display: inline-block;
+}
+#top #payment .payment_method_justifi_payment_gateway div.payment_box {
+     width: 100%;
+}
+.payment_method_justifi_payment_gateway .cc-validate {
+     position: relative;
+     display: flex;
+     justify-content: start;
+}
+.payment_method_justifi_payment_gateway .cc-validate input {
+     max-width: 85%;
+     
+}
+.payment_method_justifi_payment_gateway .cc-validate #status {
+     position: relative;
+     width: 40px;
+}
+.payment_method_justifi_payment_gateway .cc-validate i.fa-check {
+     color: #00a03c;
+} 
+.payment_method_justifi_payment_gateway .cc-validate i.fa-times {
+     color: #a00000;
+} 
+#top #payment .payment_method_justifi_payment_gateway label img {
+     width: 30px;
+     vertical-align: baseline !important;
+}
+
+/* Charts / Forms */
+.justifi-table {
+     position: relative;
+}
+justifi-payments-list::part(table-row):hover,
+justifi-payouts-list::part(table-row):hover {
+     cursor: pointer !important;
+}
+.justifi-table .payment-details {
+     display: none;
+     position: fixed;
+     top: 100px;
+     max-width: 100%;
+     background-color: #FFF;
+     padding: 20px;
+     border: 1px solid #ddd;
+     border-radius: 10px;
+     box-shadow: 10px 10px 10px rgba(0,0,0,.2);
+     z-index: 9999;
+     left: 50%;
+     transform: translateX(-50%);
+}
+.justifi-table .payment-details #close-details {
+     cursor: pointer;
+     font-size: 30px;
+     position: absolute;
+     top: 15px;
+     right: 15px;
+}
+
+/* Bank Account Details - Shortcode  (Bootstrap) */
+.bank-details.mt-4 {
+     margin-top: 3rem !important;
+}
+.bank-details h5 {
+     margin-top: 10px;
+     margin-bottom: 0.5rem;
+     font-weight: 500;
+     line-height: 1.2;
+     color: var(--bs-heading-color);
+}
+.bank-details hr {
+     margin: 1rem 0px .5rem;
+     color: inherit;
+     border-right: 0px;
+     border-bottom: 0px;
+     border-left: 0px;
+     border-image: none;
+     border-top: 1px solid rgb(33, 37, 41) !important;
+     opacity: 0.25;
+}
+.bank-details .d-table {
+     display: table !important;
+     width: 100%;
+}
+.bank-details .row > * {
+     max-width: 100%;
+     padding-right: 12px;
+     padding-left: 12px;
+     margin-top: 16px;
+     font-size: 16px;
+}
+.bank-details .row {
+     --bs-gutter-x: 1.5rem;
+     --bs-gutter-y: 0;
+     display: flex;
+     flex-wrap: wrap;
+}
+.bank-details .fw-bold {
+     font-weight: 700;
+}
+.bank-details .d-table-row {
+     display: table-row !important;
+}
+.bank-details .d-table-cell {
+     display: table-cell !important;
+}
+.bank-details .px-2 {
+     padding-right: 12px;
+}

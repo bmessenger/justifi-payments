@@ -1,0 +1,37 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+input.jf-post-meta {
+    width: 100%;
+}
+
+/* Justifi Settings Page */
+.justifi-admin h1 {
+    font-weight: 400;
+    margin: 20px 0;
+}
+.justifi-admin {
+    height: 100%;
+}
+.justifi-admin-form {
+    padding: 20px;
+    background-color: #FFF;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: block;
+    margin: 0 20px 20px 0;
+}
+.justifi-admin-form .form-table th {
+    vertical-align: middle;
+    width: 150px;
+}
+.justifi-admin-form label {
+    display: inline-block;
+    width: 100px;
+}
+.justifi-admin-form input.justifi-input {
+    margin: 5px 0;
+    width: 300px;
+    height: 40px;
+}
